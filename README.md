@@ -30,6 +30,7 @@
 * **Thư mục:** Assignment
 * `BT Tuần 2:` BT1_WF (Lập trình Window Form và ADO.NET)
 * `BT Tuần 3:` BT2_HTML (Lập trình HTML/CSS/JS)
+* `BT Tuần 3.2:` BT3_LINQ (Lập trình C#/LINQ)
 
 ## ĐỒ ÁN CUỐI KỲ
 * **Thư mục:** Project
