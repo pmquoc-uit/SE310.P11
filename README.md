@@ -24,13 +24,14 @@
 * **Mã môn học:** SE310
 * **Mã lớp:** SE310.P11
 * **Năm học:** HK1 (2024 - 2025)
-* **Giảng viên**: Huỳnh Hồ Thị Mộng Trinh - *trinhhhtm@uit.edu.vn* | Nguyễn Trịnh Đông - *dongnt@uit.edu.vn*
+* **Giảng viên**: Nguyễn Trịnh Đông - *dongnt@uit.edu.vn* | Huỳnh Hồ Thị Mộng Trinh - *trinhhhtm@uit.edu.vn* 
 
 ## BÀI TẬP QUÁ TRÌNH
 * **Thư mục:** Assignment
 * `BT Tuần 2:` BT1_WF (Lập trình Window Form và ADO.NET)
 * `BT Tuần 3:` BT2_HTML (Lập trình HTML/CSS/JS)
 * `BT Tuần 3.2:` BT3_LINQ (Lập trình C#/LINQ)
+* `BT Tuần 4:` BT4_ASP (Lập trình ASP .NET)
 
 ## ĐỒ ÁN CUỐI KỲ
 * **Thư mục:** Project
