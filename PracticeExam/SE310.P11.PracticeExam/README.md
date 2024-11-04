@@ -27,3 +27,5 @@ dotnet watch run
 3. Project chạy tại địa chỉ https://localhost:7149 cùng tài khoản mặc định là id: admin và pass: 111111
 
 4. Dùng trang Admin quản lý tại địa chỉ https://localhost:7149/Admin để thực hiện thêm/xóa/sửa sản phẩm.
+
+5. Ảnh sản phẩm đặt vào thư mục wwwroot/ProductImg/Images và nhập tên ảnh theo định dạng [tên ảnh].jpg/ví dụ anh1.jpg khi thêm hoặc sửa sản phẩm ở trang admin
