@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutOgani.cshtml";
+}
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<SanPham>
+@foreach (var item in Model)
+{
+    @await Html.PartialAsync("PartialSanPham", item)
+}
+<div class="product__pagination" style="display: flex; justify-content: center; align-items: center; margin-top: 20px; width: 100%;">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+</div>

@@ -33,6 +33,13 @@
 * `BT Tuần 3.2:` BT3_LINQ (Lập trình C#/LINQ)
 * `BT Tuần 4:` BT4_ASP (Lập trình ASP .NET)
 
+## EXAM
+* **Thư mục:** PracticeExam (Thầy/Cô vui lòng xem README.MD trong thư mục để chỉnh connectionString)
+
+## SEMINAR
+* **Thư mục:** Seminar
+* **Tên chủ đề:** Net Core Identity
+
 ## ĐỒ ÁN CUỐI KỲ
 * **Thư mục:** Project
 * **Tên đồ án:** Pharmacy Store System

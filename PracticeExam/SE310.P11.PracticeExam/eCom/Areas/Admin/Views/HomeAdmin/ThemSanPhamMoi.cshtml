@@ -1,0 +1,67 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model eCom.Models.SanPham
+
+@{
+    ViewData["Title"] = "ThemSanPhamMoi";
+    Layout = "~/Areas/Admin/Views/_LayoutAdmin.cshtml";
+}
+
+<div class="d-flex justify-content-center">
+    <h2 class="mb-0">Thêm sản phẩm mới</h2>
+</div>
+<br/>
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Thêm sản phẩm mới</h4>
+                <p class="card-description"> Vui lòng nhập đầy đủ thông tin </p>
+                <br />
+                <p class="text-warning font-weight-bold">@TempData["Message"]</p>
+                <br />
+                <form method="post" asp-action="ThemSanPhamMoi" class="forms-sample">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @* <div class="form-group">
+                        <label asp-for="MaSp" class="control-label"></label>
+                        <input asp-for="MaSp" class="form-control" placeholder="MaSp" />
+                        <span asp-validation-for="MaSp" class="text-danger"></span>
+                    </div> *@
+                    <div class="form-group">
+                        <label asp-for="TenSp" class="control-label"></label>
+                        <input asp-for="TenSp" class="form-control" placeholder="TenSp" />
+                        <span asp-validation-for="TenSp" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="MaLoai" class="control-label"></label>
+                        <select asp-for="MaLoai" class="form-control px-4" asp-items="ViewBag.MaLoai"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="AnhSp" class="control-label"></label>
+                        <input asp-for="AnhSp" class="form-control" placeholder="Uri AnhSp" />
+                        <span asp-validation-for="AnhSp" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="GiaSp" class="control-label"></label>
+                        <input asp-for="GiaSp" class="form-control" placeholder="GiaSp" />
+                        <span asp-validation-for="GiaSp" class="text-danger"></span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="form-group mt-3">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                        <div class="btn btn-light m-0 p-0">
+                            <!-- Thêm class text-center để căn giữa -->
+                            <a asp-action="Index" class="btn btn-light" style="color: inherit; text-decoration: none;">Back to List</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

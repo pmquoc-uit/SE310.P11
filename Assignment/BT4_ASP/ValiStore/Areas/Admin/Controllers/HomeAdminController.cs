@@ -1,4 +1,4 @@
-﻿using Azure;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -32,7 +32,7 @@ namespace ValiStore.Areas.Admin.Controllers
         public IActionResult ThemSanPhamMoi()
         {
             ViewBag.MaChatLieu =
-                new SelectList(qlbanVaLiContext.TChatLieus.ToList(),"MaChatLieu", "ChatLieu");
+                new SelectList(qlbanVaLiContext.TChatLieus.ToList(), "MaChatLieu", "ChatLieu");
             ViewBag.MaHangSx =
                 new SelectList(qlbanVaLiContext.THangSxes.ToList(), "MaHangSx", "HangSx");
             ViewBag.MaNuocSx =
@@ -93,7 +93,7 @@ namespace ValiStore.Areas.Admin.Controllers
         {
             TempData["Message"] = "";
             var sanPham = qlbanVaLiContext.TDanhMucSps.Find(maSanPham);
-            if(sanPham != null)
+            if (sanPham != null)
             {
                 var chiTietSanPham =
                     qlbanVaLiContext.TChiTietSanPhams.Where(x => x.MaSp == maSanPham).ToList();

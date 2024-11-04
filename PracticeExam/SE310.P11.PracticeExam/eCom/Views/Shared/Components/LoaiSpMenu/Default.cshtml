@@ -1,0 +1,63 @@
+﻿@model IEnumerable<LoaiSanPham>
+<div class="col-lg-3">
+    <div class="hero__categories">
+        <div class="hero__categories__all">
+            <i class="fa fa-bars"></i>
+            <span>All departments</span>
+        </div>
+        <ul>
+            @foreach (var item in Model)
+            {
+                @* <li><a asp-controller="Home" asp-action="SanPhamTheoLoai" asp-route-maloai="@item.MaLoai">@item.Loai</a></li> *@
+                var getUrl = "https://localhost:7149/api/productapi/" + item.MaLoai;
+                <li><a style="cursor:pointer" onclick="showProductByCategory('@getUrl')">@item.TenLoai</a></li>
+            }
+        </ul>
+    </div>
+</div>
+
+<script>
+    function showProductByCategory(getUrl) {
+        var str = '';
+        var defaultImageUrl = '@Url.Content("~/ProductImg/Images/1.jpg")'; // Đặt URL hình ảnh mặc định
+
+        $.ajax({
+            type: 'GET',
+            url: getUrl,
+            dataType: 'json',
+            success: function (data) {
+                $.each(data, function (key, value) {
+                    // Kiểm tra sự tồn tại của các thuộc tính
+                    if (value.tenSp && value.giaNhoNhat) {
+                        // Nếu có ảnh
+                        var imageUrl = (value.anhDaiDien && value.anhDaiDien.trim())
+                            ? '@Url.Content("~/ProductImg/Images/")' + value.anhDaiDien.trim()
+                            : defaultImageUrl;
+                        str += `
+                                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                                    <div class="featured__item">
+                                        <div class="featured__item__pic set-bg" data-setbg="${imageUrl}" style="background-image: url('${imageUrl}');">
+                                            <ul class="featured__item__pic__hover">
+                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="featured__item__text">
+                                            <h6><a href="/Home/ProductDetail?maSp=${value.maSp.trim()}">${value.tenSp.trim()}</a></h6>
+                                            <h5>${value.giaNhoNhat.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</h5>
+                                        </div>
+                                    </div>
+                                </div>`;
+                    }
+                });
+                $('#displayProducts').html(str);
+            },
+            error: function (xhr) {
+                console.log(imageUrl);
+                alert(xhr.responseText);
+                console.error(xhr);
+            }
+        });
+    }
+</script>
