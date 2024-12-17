@@ -41,7 +41,7 @@
 * **Tên chủ đề:** Net Core Identity
 
 ## ĐỒ ÁN CUỐI KỲ
-* **Thư mục:** Project
+* **Thư mục:** Project (Thầy/Cô vui lòng xem README.MD trong thư mục để chỉnh connectionString)
 * **Tên đồ án:** Pharmacy Store System
 
 <!-- Footer -->
