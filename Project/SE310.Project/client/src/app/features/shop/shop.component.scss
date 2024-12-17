@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes scroll-banner {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-banner {
+  animation: scroll-banner 15s linear infinite;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes scroll-products {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.products-scroll-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.products-scroll-wrapper {
+  display: flex;
+  animation: scroll-products 30s linear infinite;
+  animation-play-state: running; /* Đảm bảo animation bắt đầu chạy */
+}
+
+.products-scroll-wrapper:hover {
+  animation-play-state: paused; /* Tạm dừng animation khi trỏ chuột vào */
+}
+
+.product-items {
+  display: flex;
+  gap: 1rem;
+}
+
+.product-items app-product-item {
+  min-width: 20%; /* Mỗi sản phẩm chiếm 1/5 chiều rộng */
+  transition: transform 0.3s ease;
+}
+
+/* Dừng chuyển động khi hover vào sản phẩm */
+.product-items app-product-item:hover {
+  animation-play-state: paused;
+}

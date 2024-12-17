@@ -1,0 +1,56 @@
+<mat-card class="max-w-lg mx-auto mt-32 p-8 bg-white">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-semibold text-primary">Login</h1>
+    </div>
+    <mat-form-field appearance="outline" class="w-full mb-4">
+      <mat-label>Email address</mat-label>
+      <input
+        formControlName="email"
+        type="email"
+        placeholder="name@example.com"
+        matInput
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="w-full mb-4">
+      <mat-label>Password</mat-label>
+      <input
+        formControlName="password"
+        type="password"
+        placeholder="Password"
+        matInput
+      />
+    </mat-form-field>
+
+    <!-- Forgot Password Link -->
+    <div class="text-right mb-4">
+      <a
+        class="text-sm text-blue-500 hover:underline cursor-pointer"
+        (click)="onForgotPassword()"
+      >
+        Forgot Password?
+      </a>
+    </div>
+
+    <!-- Sign In Button -->
+    <button mat-flat-button type="submit" class="w-full py-2">Sign in</button>
+
+    <!-- Sign in with Google Button -->
+    <button
+      type="button"
+      class="w-full py-2 mb-4 mt-4 border border-gray-300 flex items-center justify-center rounded-md bg-white"
+      (click)="signInWithGoogle()"
+    >
+      <img src="https://static.cdnlogo.com/logos/g/35/google-icon.svg" alt="Google Icon" class="mr-2 w-6 h-6">
+      Sign in with Google
+    </button>
+  </form>
+
+  <!-- "Don't have an account? Sign up" Link -->
+  <div class="text-center mt-4">
+    <p class="text-sm">
+      Don't have an account?
+      <a routerLink="/account/register" class="text-blue-500 hover:underline">Sign up</a>
+    </p>
+  </div>
+</mat-card>

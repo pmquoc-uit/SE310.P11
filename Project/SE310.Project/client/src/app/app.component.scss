@@ -1,0 +1,10 @@
+/* app.component.scss */
+:host {
+  display: block;
+  height: 100%;
+}
+
+.container {
+  padding-bottom: 80px; /* Cập nhật giá trị này tùy thuộc vào chiều cao footer của bạn */
+}
+

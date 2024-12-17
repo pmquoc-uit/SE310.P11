@@ -1,0 +1,14 @@
+/* Bo góc thanh cuộn */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #838B8B; /* Màu của thanh cuộn */
+  border-radius: 8px; /* Bo góc của thanh cuộn */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #edf2f7; /* Màu của vùng nền thanh cuộn */
+  border-radius: 8px; /* Bo góc của track */
+}

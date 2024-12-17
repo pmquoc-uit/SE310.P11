@@ -1,0 +1,284 @@
+<!-- <div class="min-h-screen">
+  <mat-tab-group class="bg-white">
+    <mat-tab label="Profile"> Profile placeholder </mat-tab>
+    <mat-tab label="Address"> Address placeholder </mat-tab>
+    <mat-tab label="Password"> Password service </mat-tab>
+  </mat-tab-group>
+  <div class="py-9 px-10">
+    <div class="max-w-[960px] mx-auto">
+      <h1 class="text-lg font-bold mb-7">My Profile</h1>
+      <div class="space-y-12">
+        <div class="border  rounded-2xl p-8 group">
+          <div class="relative">
+            <div class="absolute end-0 top-0 opacity-0 group-hover:opacity-100">
+              <button mat-stroked-button>
+                <mat-icon>edit</mat-icon>Edit
+              </button>
+            </div>
+            <div class="flex items-center gap-6">
+              <emr-avatar class="size-28" text="ps"></emr-avatar>
+              <div>
+                <div class="flex items-center gap-3">
+                  <div class="text-base">{{ myUser.firstName }} {{ myUser.lastName }}</div>
+                </div>
+                <div class="text-neutral-500 text-sm mt-1">
+                  <div>{{ myUser.email }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border  rounded-2xl p-8 group">
+          <div class="relative">
+            <div class="font-bold mb-5 text-sm">Personal Information</div>
+            <div class="absolute end-0 top-0 opacity-0 group-hover:opacity-100">
+              <button mat-stroked-button>
+                <mat-icon>edit</mat-icon>Edit
+              </button>
+            </div>
+            <div class="grid grid-cols-2 text-sm w-max gap-y-7 gap-x-14">
+              <div class="col-span-1">
+                <div class="text-neutral-500">First Name</div>
+                <div class="mt-1">{{ myUser.firstName }}</div>
+              </div>
+              <div class="col-span-1">
+                <div class="text-neutral-500">Last Name</div>
+                <div class="mt-1">{{ myUser.lastName }}</div>
+              </div>
+              <div class="col-span-1">
+                <div class="text-neutral-500">Email Address</div>
+                <div class="mt-1">{{ myUser.email }}</div>
+              </div>
+              <div class="col-span-1">
+                <div class="text-neutral-500">Phone Number</div>
+                <div class="mt-1">{{ myProfile.phoneNumber }}</div>
+              </div>
+              <div class="col-span-1">
+                <div class="text-neutral-500">Job Title</div>
+                <div class="mt-1">{{ myProfile.jobTitle }}</div>
+              </div>
+              <div class="col-span-1">
+                <div class="text-neutral-500">Bio</div>
+                <div class="mt-1">{{ myProfile.bio }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border  rounded-2xl p-8 group">
+          <div class="relative">
+            <div class="font-bold mb-5 text-sm">Address</div>
+            <div class="absolute end-0 top-0 opacity-0 group-hover:opacity-100">
+              <button mat-stroked-button>
+                <mat-icon>edit</mat-icon>Edit
+              </button>
+            </div>
+            <div class="grid grid-cols-2 text-sm w-max gap-y-7 gap-x-14">
+              <div class="col-span-1">
+                <div class="text-neutral-500">Line 1</div>
+                <div class="mt-1">{{ myProfile.address.country }}</div>
+              </div>
+              <div class="col-span-1">
+                <div class="text-neutral-500">City</div>
+                <div class="mt-1">{{ myProfile.address.city }}</div>
+              </div>
+              <div class="col-span-1">
+                <div class="text-neutral-500">Street</div>
+                <div class="mt-1">{{ myProfile.address.street }}</div>
+              </div>
+              <div class="col-span-1">
+                <div class="text-neutral-500">Building</div>
+                <div class="mt-1">{{ myProfile.address.building }}</div>
+              </div>
+              <div class="col-span-1">
+                <div class="text-neutral-500">Apartment</div>
+                <div class="mt-1">{{ myProfile.address.apartment }}</div>
+              </div>
+              <div class="col-span-1">
+                <div class="text-neutral-500">Postal Code</div>
+                <div class="mt-1">{{ myProfile.address.postalCode }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border  rounded-2xl p-8 group">
+          <div class="relative">
+            <div class="font-bold mb-5 text-sm">Preferences</div>
+            <div class="absolute end-0 top-0 opacity-0 group-hover:opacity-100">
+              <button mat-stroked-button>
+                <mat-icon>edit</mat-icon>Edit
+              </button>
+            </div>
+            <div class="grid grid-cols-2 text-sm w-max gap-y-7 gap-x-14">
+              <div class="col-span-1">
+                <div class="text-neutral-500">Language</div>
+                <div class="mt-1">{{ myProfile.preferences.language.name }}</div>
+              </div>
+              <div class="col-span-1">
+                <div class="text-neutral-500">Date Format</div>
+                <div class="mt-1">{{ myProfile.preferences.dateFormat }}</div>
+              </div>
+              <div class="col-span-1">
+                <div class="text-neutral-500">Automatic time zone</div>
+                <div class="mt-1">
+                  {{ myProfile.preferences.automaticTimeZone.name }}
+
+                  @if (myProfile.preferences.automaticTimeZone.isEnabled) {
+                    (On)
+                  } @else {
+                    (Off)
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <mat-card class="max-w-lg mx-auto mt-32 p-8 bg-white">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-semibold text-primary">My Profile</h1>
+    </div>
+    <app-text-input label="First name" formControlName="firstName" />
+    <app-text-input label="Last name" formControlName="lastName" />
+    <app-text-input label="Email address" formControlName="email" />
+    <app-text-input
+      label="Password"
+      formControlName="password"
+      type="password"
+    />
+
+    @if (validationErrors) {
+    <div class="mb-3 p-4 bg-red-100 text-red-600">
+      <ul class="list-disc px-3">
+        @for (error of validationErrors; track $index) {
+        <li>{{ error }}</li>
+        }
+      </ul>
+    </div>
+    }
+
+    <button
+      [disabled]="registerForm.invalid"
+      mat-flat-button
+      type="submit"
+      class="w-full py-2"
+    >
+      Register
+    </button>
+
+    <div class="text-center mt-4">
+      <span class="text-sm">Already have an account?</span>
+      <a routerLink="/account/login" class="text-blue-500 hover:underline"> Sign In</a>
+    </div>
+  </form>
+</mat-card> -->
+
+<div class="min-h-screen">
+  <div class="py-9 px-10">
+    <div class="max-w-[960px] mx-auto">
+      <h1 class="text-lg font-bold mb-7">My Profile</h1>
+      <div class="space-y-12">
+        <mat-card class="max-w-[960px] mx-auto p-8 bg-white">
+          <div class="relative">
+            <div class="font-bold mb-5 text-sm">Personal Information</div>
+
+            <!-- Nút Edit hiện khi không ở chế độ chỉnh sửa -->
+            <div *ngIf="!isEditing" class="absolute right-0 top-0">
+              <button mat-stroked-button (click)="toggleEditMode()">
+                <mat-icon>edit</mat-icon>Edit
+              </button>
+            </div>
+
+            <!-- Nút Save hiện khi đang ở chế độ chỉnh sửa -->
+            <div *ngIf="isEditing" class="absolute right-0 top-0">
+              <button mat-stroked-button (click)="saveChanges()">
+                <mat-icon>save</mat-icon>Save
+              </button>
+            </div>
+
+            <!-- Phần thông tin cá nhân hiển thị hoặc input -->
+            <div class="grid grid-cols-2 text-sm w-max gap-y-7 gap-x-14">
+              <div class="col-span-1">
+                <div class="text-neutral-500">First Name</div>
+                <div class="mt-1" *ngIf="!isEditing">
+                  {{ myUser.firstName }}
+                </div>
+                <input
+                  *ngIf="isEditing"
+                  type="text"
+                  [(ngModel)]="myUser.firstName"
+                  class="form-input mt-1 border-2 border-purple-500 rounded py-3"
+                  placeholder="Enter First Name"
+                />
+              </div>
+
+              <div class="col-span-1">
+                <div class="text-neutral-500">Last Name</div>
+                <div class="mt-1" *ngIf="!isEditing">{{ myUser.lastName }}</div>
+                <input
+                  *ngIf="isEditing"
+                  type="text"
+                  [(ngModel)]="myUser.lastName"
+                  class="form-input mt-1 border-2 border-purple-500 rounded py-3"
+                  placeholder="Enter Last Name"
+                />
+              </div>
+
+              <div class="col-span-1">
+                <div class="text-neutral-500">Email Address</div>
+                <div class="mt-1">{{ myUser.email }}</div>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+
+        <mat-card class="max-w-[960px] mx-auto p-8 bg-white" *ngIf="!isGoogle">
+          <div class="relative">
+            <div class="font-bold mb-5 text-sm">Change Password</div>
+            <form [formGroup]="passwordForm" (ngSubmit)="onUpdate()">
+              <app-text-input
+                label="Current Password"
+                type="password"
+                formControlName="currentPassword"
+              />
+              <app-text-input
+                label="New Password"
+                type="password"
+                formControlName="newPassword"
+              />
+              <app-text-input
+                label="Confirm password"
+                type="password"
+                formControlName="confirmPassword"
+              />
+
+              @if (validationErrors) {
+              <div class="mb-3 p-4 bg-red-100 text-red-600">
+                <ul class="list-disc px-3">
+                  @for (error of validationErrors; track $index) {
+                  <li>{{ error }}</li>
+                  }
+                </ul>
+              </div>
+              }
+
+              <button
+                [disabled]="passwordForm.invalid"
+                mat-flat-button
+                type="submit"
+                class="w-full py-2"
+              >
+                Update Password
+              </button>
+            </form>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
